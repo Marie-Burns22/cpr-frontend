@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import Card from 'react-bootstrap/Card'
+import Container from 'react-bootstrap/Container'
 
 class BookingA extends Component {
     render() {
         return (
-            <Card bg="info" text="white" style={{ margin: `2em`}}>
+            <Container>
+            <Card bg="info" text="white">
                 <Card.Header as="h3">Booking Acuity - Free Account</Card.Header>
                 <Card.Body>
                     <Card.Title>Booking button, embed did not work.</Card.Title>
@@ -14,6 +16,7 @@ class BookingA extends Component {
                     </Card.Text>
                 </Card.Body>
             </Card>  
+            </Container>
         )
     }
 }

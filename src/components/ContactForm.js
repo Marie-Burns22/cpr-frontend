@@ -9,25 +9,39 @@ class ContactForm extends Component {
         return (
             <Container>
             <Form>
-                <Form.Group as={Row} controlId="exampleForm.ControlInput1">
+                <Form.Group as={Row} controlId="firstName">
+                    <Form.Label column sm={2}>First Name</Form.Label>
+                    <Col sm={10}>
+                        <Form.Control type="text" placeholder="First Name" />
+                    </Col>
+                </Form.Group>
+                
+                
+                <Form.Group as={Row} controlId="lastName">
+                    <Form.Label column sm={2}>Last Name</Form.Label>
+                    <Col sm={10}>
+                        <Form.Control type="text" placeholder="Last Name" />
+                    </Col>
+                </Form.Group>
+
+                <Form.Group as={Row} controlId="email">
                     <Form.Label column sm={2}>Email address</Form.Label>
                     <Col sm={10}>
                         <Form.Control type="email" placeholder="name@example.com" />
                     </Col>
                 </Form.Group>
+
                 
-                <Form.Group controlId="exampleForm.ControlSelect2">
-                    <Form.Label>Example multiple select</Form.Label>
-                    <Form.Control as="select" multiple>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                <Form.Group controlId="course">
+                    <Form.Label>Which courses would you like more information about?</Form.Label>
+                    <Form.Control as="select">
+                        <option>CPR HeartSaver</option>
+                        <option>First Aid</option>
+                        <option>Friends and Family</option>
                     </Form.Control>
                 </Form.Group>
-                <Form.Group controlId="exampleForm.ControlTextarea1">
-                    <Form.Label>Example textarea</Form.Label>
+                <Form.Group controlId="message">
+                    <Form.Label>Please enter any specific questions you have here:</Form.Label>
                     <Form.Control as="textarea" rows="3" />
                 </Form.Group>
             </Form>
