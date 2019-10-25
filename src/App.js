@@ -9,12 +9,12 @@ import Form from './components/Form';
 import BookingA from './components/BookingA';
 import BookingB from './components/BookingB';
 import TeacherContainer from './teachers/TeacherContainer';
+import Jumbo from './components/Jumbo';
 
 function App() {
   return (
     <div className="App">
-
-        <h1>Caldwell CPR</h1>
+        <Jumbo />
         <Info />
         <Course />
         <GoogleMap />
