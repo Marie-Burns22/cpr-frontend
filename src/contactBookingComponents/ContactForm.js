@@ -9,7 +9,7 @@ class ContactForm extends Component {
     render() {
         return (
             <Container>
-                <Card bg="light" style={{ margin: "2em 0em 2em 0em" }}>
+                <Card bg="#eeeeee" style={{ margin: "2em 0em 2em 0em" }}>
                     <Card.Header as="h3">Contact Form</Card.Header>
                     <Card.Body>
                         <Form>
