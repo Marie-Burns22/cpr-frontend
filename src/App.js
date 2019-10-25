@@ -5,7 +5,7 @@ import './App.css';
 import Info from './components/Info';
 import Course from './components/Course';
 import GoogleMap from './components/GoogleMap';
-import Form from './components/Form';
+import ContactForm from './components/ContactForm';
 import BookingA from './components/BookingA';
 import BookingB from './components/BookingB';
 import TeacherContainer from './teachers/TeacherContainer';
@@ -20,7 +20,7 @@ function App() {
         <Info />
         <Course />
         <GoogleMap />
-        <Form />
+        <ContactForm />
         <BookingA />
         <BookingB />
         <TeacherContainer />
