@@ -6,7 +6,7 @@ class Info extends Component {
         return (
             <div className="container">
                 <Card bg="info" text="white" style={{ margin: "2em 0em 2em 0em" }}> 
-                    <Card.Header>{this.props.title}</Card.Header>
+                    <Card.Header as="h3">{this.props.title}</Card.Header>
                     <Card.Body>
                         {/* <Card.Title>Info Card Title</Card.Title> */}
                         <Card.Text>
