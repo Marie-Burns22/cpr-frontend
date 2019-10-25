@@ -5,8 +5,8 @@ class CourseContainer extends Component {
     render() {
         return (
             <div>
-                <Course name="CPR"/>
-                <Course name="First Aid"/>
+                <Course name="CPR" description="Course description goes here"/>
+                <Course name="First Aid" description="Course description goes here"/>
             </div>
         )
     }
