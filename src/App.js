@@ -2,23 +2,23 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import Info from './components/Info';
-import Course from './components/Course';
-import GoogleMap from './components/GoogleMap';
-import ContactForm from './components/ContactForm';
-import BookingA from './components/BookingA';
-import BookingB from './components/BookingB';
-import TeacherContainer from './teachers/TeacherContainer';
-import Jumbo from './components/Jumbo';
-import Navigation from './components/Navigation';
+import InfoContainer from './infoComponents/InfoContainer';
+import GoogleMap from './layoutComponents/GoogleMap';
+import ContactForm from './contactBookingComponents/ContactForm';
+import BookingA from './contactBookingComponents/BookingA';
+import BookingB from './contactBookingComponents/BookingB';
+import TeacherContainer from './teacherComponents/TeacherContainer';
+import Jumbo from './layoutComponents/Jumbo';
+import Navigation from './layoutComponents/Navigation';
+import CourseContainer from './courseComponents/CourseContainer';
 
 function App() {
   return (
     <div className="App">
         <Jumbo />
         <Navigation />
-        <Info />
-        <Course />
+        <InfoContainer />
+        <CourseContainer />
         <GoogleMap />
         <ContactForm />
         <BookingA />

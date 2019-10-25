@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Teacher from '../components/Teacher'
+import Teacher from './Teacher'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Container from 'react-bootstrap/Container'
 
