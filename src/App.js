@@ -10,11 +10,13 @@ import BookingA from './components/BookingA';
 import BookingB from './components/BookingB';
 import TeacherContainer from './teachers/TeacherContainer';
 import Jumbo from './components/Jumbo';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <div className="App">
         <Jumbo />
+        <Navigation />
         <Info />
         <Course />
         <GoogleMap />

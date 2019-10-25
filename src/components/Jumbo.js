@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container'
 
 export default function Jumbo() {
     return (
-        <Jumbotron fluid style={{background: "red", color: "white", padding: "2em"}}  >
+        <Container>
+        <Jumbotron fluid style={{ background: "#c10000", color: "white", padding: "2em"}}  >
             <Container>
                 <h1>Caldwell CPR</h1>
                 <p>
@@ -12,6 +13,7 @@ export default function Jumbo() {
                 </p>
             </Container>
         </Jumbotron>
+        </Container>
     )
 }
 
