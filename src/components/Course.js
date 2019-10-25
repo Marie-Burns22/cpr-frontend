@@ -5,8 +5,8 @@ class Course extends Component {
         return (
             <div>
                 <h1>Course Title</h1>
-                <p>Course description</p>
-                <p> Course Fee</p>
+                <h3>Course description</h3>
+                <h3> Course Fee</h3>
             </div>
         )
     }

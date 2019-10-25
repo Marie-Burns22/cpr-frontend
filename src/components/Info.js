@@ -5,7 +5,7 @@ class Info extends Component {
         return (
             <div className="container">
                 <h1> Info title</h1>
-                <p>Info content</p>
+                <h3>Info content</h3>
             </div>
         )
     }
