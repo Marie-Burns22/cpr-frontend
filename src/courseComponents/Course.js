@@ -7,11 +7,11 @@ class Course extends Component {
         return (
             <Container>
                 <Card style={{ margin: "2em 0em 2em 0em" }}>
-                    <Card.Header as="h3" style={{ background: "#bf0000", color: "#eeeeee"}}>{this.props.name}</Card.Header>
+                    <Card.Header as="h3" style={{ background: "#bf0000", color: "#eeeeee"}}>{this.props.course.title}</Card.Header>
                     <Card.Body style={{ background: "#eeeeee" }}>
-                        <Card.Title>Course Fee: $00</Card.Title>
+                        <Card.Title>Course Fee: ${this.props.course.fee}</Card.Title>
                         <Card.Text text="black">
-                            {this.props.description}
+                            {this.props.course.description}
                         </Card.Text>
                     </Card.Body>
                 </Card>

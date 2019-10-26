@@ -87,7 +87,9 @@ class CourseContainer extends Component {
                 )
             } else {
                 return (
-                    {courseCards}
+                    <div>
+                        {courseCards}
+                    </div>
                 )
             }
         
