@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import Course from './Course'
+import Alert from 'react-bootstrap/Alert'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import Button from 'react-bootstrap/Button'
+import Spinner from 'react-bootstrap/Spinner'
 
 class CourseContainer extends Component {
 
@@ -37,12 +41,57 @@ class CourseContainer extends Component {
     }
 
     render() {
-        return (
-            <div>
-                <Course name="CPR" description="Course description goes here"/>
-                <Course name="First Aid" description="Course description goes here"/>
-            </div>
-        )
+        const { error, isLoaded, courses } = this.state;
+        const courseCards = courses.map(c => (
+            <Course key={c.id} course={c.attributes} id={c.id} />
+        ))
+
+        if (error) {
+            return (
+                <Alert variant="warning">
+                    Error: {error.message}
+                </Alert>
+            )
+            } else if (!isLoaded) {
+                return (
+                    <Alert variant="danger">
+                        <ButtonToolbar>
+                            <Button variant="danger" disabled>
+                                <Spinner
+                                    as="span"
+                                    animation="border"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                />
+                                <span className="sr-only">Loading...</span>
+                            </Button>
+                            <Button variant="danger" disabled>
+                                <Spinner
+                                    as="span"
+                                    animation="grow"
+                                    size="sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                />
+                                Loading...
+                            </Button>
+                        </ButtonToolbar>
+                    </Alert>
+                )
+            } else if (!courses || courses === undefined || courses.length === 0) {
+                return (
+                    <Alert variant="danger">
+                        Please contact us using <Alert.Link href="/contact">the Contact Form</Alert.Link>for more information regarding available courses.
+                    </Alert>
+                )
+            } else {
+                return (
+                    {courseCards}
+                )
+            }
+        
+        
     }
 }
 
