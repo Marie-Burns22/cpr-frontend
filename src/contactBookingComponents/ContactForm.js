@@ -11,9 +11,9 @@ class ContactForm extends Component {
     render() {
         return (
             <Container>
-                <Card bg="#eeeeee" style={{ margin: "2em 0em 2em 0em" }}>
-                    <Card.Header as="h3">Contact Form</Card.Header>
-                    <Card.Body>
+                <Card style={{ margin: "2em 0em 2em 0em" }}>
+                    <Card.Header as="h3" style={{ background: "#bf0000" }}>Contact Form</Card.Header>
+                    <Card.Body style={{ background: "#eeeeee" }}>
                         <Form>
                             <Form.Group as={Row} controlId="firstName">
                                 <Form.Label column sm={2}>First Name</Form.Label>
@@ -50,7 +50,7 @@ class ContactForm extends Component {
                                 <Form.Control as="textarea" rows="3" />
                             </Form.Group>
 
-                            <Button variant="primary" type="submit">
+                            <Button type="submit" style={{ background: "#bf0000", color: "white" }}>
                                 Submit
                             </Button>
 
