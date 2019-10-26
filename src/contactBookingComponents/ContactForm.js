@@ -4,6 +4,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import Button from "react-bootstrap/Button"
+import GoogleMap from '../infoComponents/GoogleMap'
 
 class ContactForm extends Component {
     render() {
@@ -48,9 +50,14 @@ class ContactForm extends Component {
                                 <Form.Control as="textarea" rows="3" />
                             </Form.Group>
 
+                            <Button variant="primary" type="submit">
+                                Submit
+                            </Button>
+
                         </Form>
                     </Card.Body>
                 </Card>
+                <GoogleMap />
             </Container>
         )
     }

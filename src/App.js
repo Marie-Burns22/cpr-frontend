@@ -7,8 +7,6 @@ import './App.css';
 
 import InfoContainer from './infoComponents/InfoContainer';
 import ContactForm from './contactBookingComponents/ContactForm';
-import BookingA from './contactBookingComponents/BookingA';
-import BookingB from './contactBookingComponents/BookingB';
 import TeacherContainer from './teacherComponents/TeacherContainer';
 import Jumbo from './layoutComponents/Jumbo';
 import CourseContainer from './courseComponents/CourseContainer';
@@ -21,11 +19,9 @@ function App() {
           <Route exact path="/" component={InfoContainer} />
           <Route path='/teachers' component={TeacherContainer} />
           <Route path='/courses' component={CourseContainer} />
+          <Route path="/contact" component={ContactForm} />
           <Route path="*"><Redirect to="/" /></Route>
         </Switch>
-        <ContactForm />
-        <BookingA />
-        <BookingB />
     </div>
   );
 }
