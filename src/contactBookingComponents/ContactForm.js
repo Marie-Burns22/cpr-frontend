@@ -12,7 +12,7 @@ class ContactForm extends Component {
         return (
             <Container>
                 <Card style={{ margin: "2em 0em 2em 0em" }}>
-                    <Card.Header as="h3" style={{ background: "#bf0000" }}>Contact Form</Card.Header>
+                    <Card.Header as="h3" style={{ background: "#bf0000", color: "#eeeeee" }}>Contact Form</Card.Header>
                     <Card.Body style={{ background: "#eeeeee" }}>
                         <Form>
                             <Form.Group as={Row} controlId="firstName">

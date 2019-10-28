@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-import Container from 'react-bootstrap/Container'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Card from 'react-bootstrap/Card'
 
 class GoogleMap extends Component {
     render() {
         return (
-            <Container>
-                <Card style={{ margin: "2em 0em 2em 0em" }}>
-                    <Card.Header as="h3" style={{ background: "#bf0000", color: "white" }}>Class Location and Map</Card.Header>
-                    <Card.Body style={{ background: "#eeeeee" }} >
+            <Card style={{ margin: "2em 0em 2em 0em" }}>
+                <Card.Header as="h3" style={{ background: "#bf0000", color: "white" }}>Class Location and Map</Card.Header>
+                <Card.Body style={{ background: "#eeeeee" }} >
                     <Card.Title>38 Via Pescara, American Canyon</Card.Title>
                     <div style={{ width: 660, height: 'auto' }}>
                         <ResponsiveEmbed aspectRatio="16by9">
@@ -18,9 +16,6 @@ class GoogleMap extends Component {
                     </div>
                 </Card.Body>
             </Card>
-
-
-            </Container>
         )
     }
 }
