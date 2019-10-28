@@ -52,21 +52,21 @@ class CourseContainer extends Component {
                     Error: {error.message}
                 </Alert>
             )
-            } else if (!isLoaded) {
-                return (
-                    <Alert variant="danger">
-                        <ButtonToolbar>
-                            <Button variant="danger" disabled>
-                                <Spinner
-                                    as="span"
-                                    animation="border"
-                                    size="sm"
-                                    role="status"
-                                    aria-hidden="true"
-                                />
-                                <span className="sr-only">Loading...</span>
-                            </Button>
-                            <Button variant="danger" disabled>
+        } else if (!isLoaded) {
+            return (
+                <Alert variant="danger">
+                    <ButtonToolbar>
+                        <Button variant="danger" disabled>
+                            <Spinner
+                                as="span"
+                                animation="border"
+                                size="sm"
+                                role="status"
+                                aria-hidden="true"
+                            />
+                            <span className="sr-only">Loading...</span>
+                        </Button>
+                        <Button variant="danger" disabled>
                                 <Spinner
                                     as="span"
                                     animation="grow"
@@ -76,25 +76,23 @@ class CourseContainer extends Component {
                                 />
                                 Loading...
                             </Button>
-                        </ButtonToolbar>
-                    </Alert>
-                )
-            } else if (!courses || courses === undefined || courses.length === 0) {
-                return (
-                    <Alert variant="danger">
-                        Please contact us using <Alert.Link href="/contact">the Contact Form</Alert.Link>for more information regarding available courses.
-                    </Alert>
-                )
-            } else {
-                return (
-                    <div>
-                        {courseCards}
-                    </div>
-                )
-            }
-        
-        
+                    </ButtonToolbar>
+                </Alert>
+            )
+        } else if (!courses || courses === undefined || courses.length === 0) {
+            return (
+                <Alert variant="danger">
+                    Please contact us using <Alert.Link href="/contact">the Contact Form</Alert.Link>for more information regarding available courses.
+                </Alert>
+            )
+        } else {
+            return (
+                <div>
+                    {courseCards}
+                </div>
+            )
+        }
     }
 }
 
-export default CourseContainer
+export default CourseContainer;
