@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button'
 
 export default function Navigation () {
@@ -11,7 +10,7 @@ export default function Navigation () {
             <Navbar.Brand href="/">Debbie's CPR</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto" className="justify-content-center container">
+                <Nav className="mr-auto justify-content-center container">
                         <Nav.Link href="/"><Button style={{ background: "#8b0000", border: "none"}}>About</Button></Nav.Link>
                         <Nav.Link href="/courses"><Button style={{ background: "#8b0000", border: "none"}}>Classes</Button></Nav.Link>
                         <Nav.Link href="/contact"><Button style={{ background: "#8b0000", border: "none" }}>Contact</Button></Nav.Link>
