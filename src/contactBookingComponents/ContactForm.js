@@ -137,6 +137,13 @@ class ContactForm extends Component {
                                     </Col>
                                 </Form.Group>
 
+                                <Form.Group as={Row} controlId="Phone Number">
+                                    <Form.Label column sm={10}>If you would prefer us to call you, please provide your phone number:</Form.Label>
+                                    <Col sm={10}>
+                                        <Form.Control name="phone" type="text" placeholder="123-456-7890" />
+                                    </Col>
+                                </Form.Group>
+
                                 <Form.Group controlId="course">
                                     <Form.Label>Which courses would you like more information about?</Form.Label>
                                     <Form.Control name="Class Interest" as="select" placeholder="Which class are you interested in?">
