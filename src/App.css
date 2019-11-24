@@ -1,14 +1,18 @@
 .App {
 
   background-color: #ffffff;
-  font-family: 'Nunito Sans', sans-serif;
+  /* font-family: 'Nunito Sans', sans-serif; */
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
+  font-family: 'Merienda', cursive;
   color: white;
+  
 }
 
 h3 {
+  font-family: 'Merienda', cursive;
   /* color: white; */
 }
 
