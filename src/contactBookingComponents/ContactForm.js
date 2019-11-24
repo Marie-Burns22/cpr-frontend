@@ -6,9 +6,6 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from "react-bootstrap/Button"
 import GoogleMap from '../infoComponents/GoogleMap'
-import Alert from 'react-bootstrap/Alert'
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
-import Spinner from 'react-bootstrap/Spinner'
 
 class ContactForm extends Component {
 
@@ -16,36 +13,9 @@ class ContactForm extends Component {
         super(props);
         this.submitForm = this.submitForm.bind(this);
         this.state = {
-            status: "",
-            courses: [],
-            error: null,
-            isLoaded: false,
+            status: ""
         };
-    }
 
-    componentDidMount() {
-        fetch('https://dcpr.herokuapp.com/api/v1/courses', {
-            method: 'GET',    
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-                }
-        })
-            .then(response => response.json())
-            .then(
-                (result) => {
-                    this.setState({
-                        isLoaded: true,
-                        courses: result.data
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        isLoaded: true,
-                        error
-                    });
-                }
-            )
     }
 
     submitForm(ev) {
@@ -68,104 +38,62 @@ class ContactForm extends Component {
     }
    
     render() {
-        const { status, error, isLoaded, courses } = this.state;
-        if (error) {
-            return (
-                <Alert variant="warning">
-                    Error: {error.message}
-                </Alert>
-            )
-        } else if (status === "SUCCESS") {
-            return (
-                <Alert variant="danger">
-                    Thank you for contacting us! We will respond soon.
-                </Alert>
-            )
+        const { status } = this.state;
+        return (
+            <Container>
+                <Card style={{ margin: "2em 0em 2em 0em" }}>
+                    <Card.Header as="h3" style={{ background: "#bf0000", color: "#eeeeee" }}>
+                        Questions?
 
-        } else if (!isLoaded) {
-            return (
-                <Alert variant="danger">
-                    <ButtonToolbar>
-                        <Button variant="danger" disabled>
-                            <Spinner
-                                as="span"
-                                animation="border"
-                                size="sm"
-                                role="status"
-                                aria-hidden="true"
-                            />
-                            <span className="sr-only">Loading...</span>
-                        </Button>
-                        <Button variant="danger" disabled>
-                            <Spinner
-                                as="span"
-                                animation="grow"
-                                size="sm"
-                                role="status"
-                                aria-hidden="true"
-                            />
-                            Loading...
-                            </Button>
-                    </ButtonToolbar>
-                </Alert>
-            )
-        } else {
-            return (
-                <Container>
-                    <Card style={{ margin: "2em 0em 2em 0em" }}>
-                        <Card.Header as="h3" style={{ background: "#bf0000", color: "#eeeeee" }}>
-                            Questions?
+                        <br />
+                        <Card.Title>Information about cards, location, and scheduling is on our Info page.</Card.Title>
+                        <Card.Title>You can cancel or reschedule a class using the links in your scheduling confirmation email.</Card.Title>
+                    </Card.Header>
+                    
+                    <Card.Body style={{ background: "#eeeeee" }}>
+                        <Form onSubmit={this.submitForm} action="https://formspree.io/mdoknnkd" method="POST">
+                            <Form.Group as={Row} controlId="firstName">
+                                <Form.Label column sm={2}>First Name</Form.Label>
+                                <Col sm={10}>
+                                    <Form.Control name="First Name" type="text" placeholder="First Name" />
+                                </Col>
+                            </Form.Group>
+                            
+                            <Form.Group as={Row} controlId="lastName">
+                                <Form.Label column sm={2}>Last Name</Form.Label>
+                                <Col sm={10}>
+                                    <Form.Control name="Last Name" type="text" placeholder="Last Name" />
+                                </Col>
+                            </Form.Group>
 
-                            <br />
-                            <Card.Title>Information about cards, location, and scheduling is on our Info page.</Card.Title>
-                            <Card.Title>You can cancel or reschedule a class using the links in your scheduling confirmation email.</Card.Title>
-                        </Card.Header>
-                        
-                        <Card.Body style={{ background: "#eeeeee" }}>
-                            <Form onSubmit={this.submitForm} action="https://formspree.io/mdoknnkd" method="POST">
-                                <Form.Group as={Row} controlId="firstName">
-                                    <Form.Label column sm={2}>First Name</Form.Label>
-                                    <Col sm={10}>
-                                        <Form.Control name="First Name" type="text" placeholder="First Name" />
-                                    </Col>
-                                </Form.Group>
-                                
-                                <Form.Group as={Row} controlId="lastName">
-                                    <Form.Label column sm={2}>Last Name</Form.Label>
-                                    <Col sm={10}>
-                                        <Form.Control name="Last Name" type="text" placeholder="Last Name" />
-                                    </Col>
-                                </Form.Group>
+                            <Form.Group as={Row} controlId="email">
+                                <Form.Label column sm={2}>Email address</Form.Label>
+                                <Col sm={10}>
+                                    <Form.Control name="email" type="email" placeholder="name@example.com" />
+                                </Col>
+                            </Form.Group>
 
-                                <Form.Group as={Row} controlId="email">
-                                    <Form.Label column sm={2}>Email address</Form.Label>
-                                    <Col sm={10}>
-                                        <Form.Control name="email" type="email" placeholder="name@example.com" />
-                                    </Col>
-                                </Form.Group>
+                            <Form.Group as={Row} controlId="Phone Number">
+                                <Form.Label column sm={10}>If you would prefer us to call you, please provide your phone number:</Form.Label>
+                                <Col sm={10}>
+                                    <Form.Control name="phone" type="text" placeholder="123-456-7890" />
+                                </Col>
+                            </Form.Group>
 
-                                <Form.Group as={Row} controlId="Phone Number">
-                                    <Form.Label column sm={10}>If you would prefer us to call you, please provide your phone number:</Form.Label>
-                                    <Col sm={10}>
-                                        <Form.Control name="phone" type="text" placeholder="123-456-7890" />
-                                    </Col>
-                                </Form.Group>
+                            <Form.Group controlId="message">
+                                <Form.Label>Please enter any specific questions you have here:</Form.Label>
+                                <Form.Control name="Message" as="textarea" rows="3" />
+                            </Form.Group>
 
-                                <Form.Group controlId="message">
-                                    <Form.Label>Please enter any specific questions you have here:</Form.Label>
-                                    <Form.Control name="Message" as="textarea" rows="3" />
-                                </Form.Group>
-
-                                
-                                {status === "SUCCESS" ? <p>Thanks!</p> : <Button type="submit" style={{ background: "#bf0000", color: "white" }}>Submit</Button> }
-                                {status === "ERROR" && <p>Ooops! There was an error.</p>}
-                            </Form>
-                        </Card.Body>
-                    </Card>
-                    <GoogleMap />
-                </Container>
-            )
-        }
+                            
+                            {status === "SUCCESS" ? <p>Thanks!</p> : <Button type="submit" style={{ background: "#bf0000", color: "white" }}>Submit</Button> }
+                            {status === "ERROR" && <p>Ooops! There was an error.</p>}
+                        </Form>
+                    </Card.Body>
+                </Card>
+                <GoogleMap />
+            </Container>
+        )
     }
 }
 
