@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import Teacher from './Teacher'
 import CardDeck from 'react-bootstrap/CardDeck'
 import Container from 'react-bootstrap/Container'
 import Alert from 'react-bootstrap/Alert';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Button from 'react-bootstrap/Button'
 import Spinner from 'react-bootstrap/Spinner'
+import Card from "react-bootstrap/Card"
 
 class TeacherContainer extends Component {
     
@@ -42,13 +42,9 @@ class TeacherContainer extends Component {
             )
     }
     
-    
     render() {
         const { error, isLoaded, teachers } = this.state;
-        const teacherCards = teachers.map(t => (
-            <Teacher key={t.id} teacher={t.attributes} id={t.id} />
-        ))
-
+        
         if (error) {
             return (
                 <Alert variant="warning">
@@ -89,10 +85,38 @@ class TeacherContainer extends Component {
                 </Alert>
             )
         } else {
+            const bridget = teachers.find(teacher => teacher.id === "1").attributes;
+            const richard = teachers.find(teacher => teacher.id === "2").attributes;
+            const debbie = teachers.find(teacher => teacher.id === "3").attributes;
             return (
                 <Container>
+                    <Card.Header as="h3" style={{ background: "#bf0000", color: "white" }}>Debbie's family has been teaching CPR since 2001. All our classes are taught by Debbie, her husband Richard, or their daughter Bridget.</Card.Header>
+                    <br />
                     <CardDeck>
-                        {teacherCards}
+                        <Card>
+                            <Card.Body>
+                                <Card.Title>{debbie.name}</Card.Title>
+                                <Card.Text>
+                                    {debbie.description}
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Body>
+                                <Card.Title>{richard.name}</Card.Title>
+                                <Card.Text>
+                                    {richard.description}
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
+                        <Card>
+                            <Card.Body>
+                                <Card.Title>{bridget.name}</Card.Title>
+                                <Card.Text>
+                                    {bridget.description}
+                                </Card.Text>
+                            </Card.Body>
+                        </Card>
                     </CardDeck>
                 </Container>
             )

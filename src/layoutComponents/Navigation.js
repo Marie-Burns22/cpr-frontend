@@ -14,7 +14,6 @@ export default function Navigation () {
                         <Nav.Link href="/contact"><Button style={{ background: "#8b0000", border: "none" }}>Contact</Button></Nav.Link>
                         <Nav.Link href="/teachers"><Button style={{ background: "#8b0000", border: "none" }}>Instructors</Button></Nav.Link>
                         <Nav.Link href="/courses"><Button style={{ background: "#8b0000", border: "none"}}>Private Group Courses</Button></Nav.Link>
-                        {/* <Nav.Link href="https://app.acuityscheduling.com/schedule.php?owner=18637332" target="_blank" rel="noopener noreferrer"><Button style={{ background: "#8b0000", border: "none" }}>Book a CPR Class</Button></Nav.Link> */}
                         <Nav.Link href="/"><Button style={{ background: "#8b0000", border: "none"}}>Book CPR BLS Course</Button></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>  
