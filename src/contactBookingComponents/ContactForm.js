@@ -117,12 +117,12 @@ class ContactForm extends Component {
                             Questions?
 
                             <br />
-                            <Card.Title>Information about cards, location, and scheduling is on our Home page.</Card.Title>
+                            <Card.Title>Information about cards, location, and scheduling is on our Info page.</Card.Title>
                             <Card.Title>You can cancel or reschedule a class using the links in your scheduling confirmation email.</Card.Title>
                         </Card.Header>
                         
                         <Card.Body style={{ background: "#eeeeee" }}>
-                                <Form onSubmit={this.submitForm} action="https://formspree.io/xnqagyde" method="POST">
+                            <Form onSubmit={this.submitForm} action="https://formspree.io/mdoknnkd" method="POST">
                                 <Form.Group as={Row} controlId="firstName">
                                     <Form.Label column sm={2}>First Name</Form.Label>
                                     <Col sm={10}>

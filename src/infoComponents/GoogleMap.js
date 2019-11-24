@@ -6,7 +6,7 @@ class GoogleMap extends Component {
     render() {
         return (
             <Card style={{ margin: "2em 0em 2em 0em" }}>
-                <Card.Header as="h3" style={{ background: "#bf0000", color: "white" }}>Class Location and Map</Card.Header>
+                <Card.Header as="h3" style={{ background: "#bf0000", color: "white" }}>Map</Card.Header>
                 <Card.Body>
                     <Card.Title>38 Via Pescara, American Canyon</Card.Title>
                     <div style={{ width: "auto", height: 600 }}>
