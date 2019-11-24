@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 
 
 export default function(props) {
-    const fee = props.course.fee ? `Course Fee: $${props.course.fee}` : <Link to="/courseForm"><Button style={{ background: "#8b0000", border: "none" }}>Contact for fee information</Button></Link>
+    const fee = <Link to="/courseForm"><Button style={{ background: "#8b0000", border: "none" }}>Request More Information</Button></Link>
     return (
         <Container>
             <Card style={{ margin: "2em 0em 2em 0em" }}>
