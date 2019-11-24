@@ -11,12 +11,14 @@ import TeacherContainer from './teacherComponents/TeacherContainer';
 import Jumbo from './layoutComponents/Jumbo';
 import CourseContainer from './courseComponents/CourseContainer';
 import Navigation from './layoutComponents/Navigation';
+// import Scheduling from './infoComponents/Scheduling';
 
 function App() {
   return (
     <div className="App">
         <Jumbo />
         <Navigation />
+        {/* <Scheduling /> */}
         <Switch>
           <Route exact path="/" component={InfoContainer} />
           <Route path='/teachers' component={TeacherContainer} />

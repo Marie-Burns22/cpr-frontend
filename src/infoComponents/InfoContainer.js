@@ -6,6 +6,7 @@ import Alert from 'react-bootstrap/Alert';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Button from 'react-bootstrap/Button'
 import Spinner from 'react-bootstrap/Spinner'
+import Scheduling from './Scheduling';
 
 class InfoContainer extends Component {
 
@@ -90,6 +91,7 @@ class InfoContainer extends Component {
         } else {
             return (
                 <Container>
+                    <Scheduling />
                     {infoCards} 
                     <GoogleMap />
                 </Container>
