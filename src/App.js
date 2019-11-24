@@ -11,6 +11,7 @@ import TeacherContainer from './teacherComponents/TeacherContainer';
 import Jumbo from './layoutComponents/Jumbo';
 import CourseContainer from './courseComponents/CourseContainer';
 import Navigation from './layoutComponents/Navigation';
+import BridgetForm from './contactBookingComponents/BridgetForm';
 // import Scheduling from './infoComponents/Scheduling';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path='/teachers' component={TeacherContainer} />
           <Route path='/courses' component={CourseContainer} />
           <Route path="/contact" component={ContactForm} />
+          <Route path="/courseForm" component={BridgetForm} />
           <Route path="*"><Redirect to="/" /></Route>
         </Switch>
     </div>
