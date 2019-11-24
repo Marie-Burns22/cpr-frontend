@@ -113,16 +113,9 @@ class ContactForm extends Component {
             return (
                 <Container>
                     <Card style={{ margin: "2em 0em 2em 0em" }}>
-                        <Card.Header as="h3" style={{ background: "#bf0000", color: "#eeeeee" }}>
-                            Questions?
-
-                            <br />
-                            <Card.Title>Information about cards, location, and scheduling is on our Home page.</Card.Title>
-                            <Card.Title>You can cancel or reschedule a class using the links in your scheduling confirmation email.</Card.Title>
-                        </Card.Header>
-                        
+                        <Card.Header as="h3" style={{ background: "#bf0000", color: "#eeeeee" }}>Request Information about Private Group Courses</Card.Header>
                         <Card.Body style={{ background: "#eeeeee" }}>
-                                <Form onSubmit={this.submitForm} action="https://formspree.io/xnqagyde" method="POST">
+                                <Form onSubmit={this.submitForm} action="https://formspree.io/mbjlrrjg" method="POST">
                                 <Form.Group as={Row} controlId="firstName">
                                     <Form.Label column sm={2}>First Name</Form.Label>
                                     <Col sm={10}>
@@ -149,6 +142,19 @@ class ContactForm extends Component {
                                     <Col sm={10}>
                                         <Form.Control name="phone" type="text" placeholder="123-456-7890" />
                                     </Col>
+                                </Form.Group>
+
+                                <Form.Group controlId="course">
+                                    <Form.Label>Which courses would you like more information about?</Form.Label>
+                                    <Form.Control name="Class Interest" as="select" placeholder="Which class are you interested in?">
+                                        <option selected>Select a Class</option>
+                                        {courses.map(c => 
+                                            (
+                                                <option key={c.id}>{c.attributes.title}</option>
+                                            ))
+                                        }
+
+                                    </Form.Control>
                                 </Form.Group>
 
                                 <Form.Group controlId="message">
