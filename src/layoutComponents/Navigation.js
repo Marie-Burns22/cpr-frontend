@@ -15,6 +15,7 @@ export default function Navigation () {
                         <Nav.Link href="/teachers"><Button style={{ background: "#8b0000", border: "none" }}>Instructors</Button></Nav.Link>
                         <Nav.Link href="/courses"><Button style={{ background: "#8b0000", border: "none"}}>Private Group Courses</Button></Nav.Link>
                         <Nav.Link href="/"><Button style={{ background: "#8b0000", border: "none"}}>Book CPR BLS Course</Button></Nav.Link>
+                        <Nav.Link href="https://ecards.heart.org/student/myecards?pid=ahaecard.employerStudentSearch"><Button style={{ background: "#8b0000", border: "none"}}>Replacement Cards</Button></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>  
         </Navbar>
