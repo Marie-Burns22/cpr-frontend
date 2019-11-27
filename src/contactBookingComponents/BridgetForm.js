@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import Button from "react-bootstrap/Button"
-import GoogleMap from '../infoComponents/GoogleMap'
 import Alert from 'react-bootstrap/Alert'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
 import Spinner from 'react-bootstrap/Spinner'
@@ -168,7 +167,7 @@ class ContactForm extends Component {
                             </Form>
                         </Card.Body>
                     </Card>
-                    <GoogleMap />
+
                 </Container>
             )
         }

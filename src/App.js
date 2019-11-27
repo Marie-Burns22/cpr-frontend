@@ -12,7 +12,7 @@ import Jumbo from './layoutComponents/Jumbo';
 import CourseContainer from './courseComponents/CourseContainer';
 import Navigation from './layoutComponents/Navigation';
 import BridgetForm from './contactBookingComponents/BridgetForm';
-// import Scheduling from './infoComponents/Scheduling';
+import Scheduling from './infoComponents/Scheduling';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         {/* <Scheduling /> */}
         <Switch>
           <Route exact path="/" component={InfoContainer} />
+          <Route exact path="/scheduling" component={Scheduling} />
           <Route path='/teachers' component={TeacherContainer} />
           <Route path='/courses' component={CourseContainer} />
           <Route path="/contact" component={ContactForm} />

@@ -91,9 +91,9 @@ class InfoContainer extends Component {
         } else {
             return (
                 <Container>
-                    <Scheduling />
                     {infoCards} 
                     <GoogleMap />
+                    <Scheduling />
                 </Container>
             )
         }

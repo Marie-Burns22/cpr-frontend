@@ -11,7 +11,7 @@ export default function Navigation () {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto justify-content-center container">
                         <Nav.Link href="/"><Button style={{ background: "#8b0000", border: "none"}}>Info</Button></Nav.Link>
-                        <Nav.Link href="/"><Button style={{ background: "#8b0000", border: "none"}}>Book CPR BLS Course</Button></Nav.Link>
+                        <Nav.Link href="/scheduling"><Button style={{ background: "#8b0000", border: "none"}}>Book CPR BLS Course</Button></Nav.Link>
                         <Nav.Link href="/teachers"><Button style={{ background: "#8b0000", border: "none" }}>Instructors</Button></Nav.Link>
                         <Nav.Link href="/courses"><Button style={{ background: "#8b0000", border: "none"}}>Private Group Courses</Button></Nav.Link>
                         <Nav.Link href="/contact"><Button style={{ background: "#8b0000", border: "none" }}>Contact</Button></Nav.Link>
