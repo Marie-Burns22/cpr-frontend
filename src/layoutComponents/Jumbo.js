@@ -10,7 +10,8 @@ export default function Jumbo() {
             <Container style={{ marginBottom: "2em" }}>
                 <h1>Debbie's CPR</h1>
                 <h4 style={{ color: "white"}}>
-                    Our family offers decades of professional experience teaching personalized CPR courses for professionals and everyone interested in learning life saving skills.
+                    {/* Our family offers decades of professional experience teaching personalized CPR courses for professionals and everyone interested in learning life saving skills. */}
+                    Due to the coronavirus outbreak, all CPR classes have been canceled. Kaiser employees have been given a 60-day extension on CPR card expiration date. All other employees need to ask their employers what policy will be enforced. To get future class dates please check back periodically at this website. We will resume classes once we are advised by health departments to do so.
                 </h4>
             </Container>
         </Jumbotron>
