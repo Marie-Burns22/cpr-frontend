@@ -45,7 +45,8 @@ class InfoContainer extends Component {
 
     render() {
         const { error, isLoaded, infos } = this.state;
-        const infoCards = infos.map(i => (
+        const nonHeaderInfos = infos.filter(info => info.attributes.placement !== "Header")
+        const infoCards = nonHeaderInfos.map(i => (
             <Info key={i.id} info={i.attributes} id={i.id} />
         ))
 
