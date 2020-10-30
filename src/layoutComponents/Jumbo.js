@@ -40,10 +40,18 @@ class Jumbo extends Component {
 
     render() {
         const { error, isLoaded, infos } = this.state
+        const headerStyle = {
+          border: '1px solid #00000020',
+          borderRadius: '5px',
+          padding: '1em',
+          margin: '1em',
+          background: '#bf0000',
+          boxSizing: 'border-box'
+        }
         if (error) {
           return (
-            <Jumbotron fluid style={{ backgroundImage: `url(${red})`, backgroundSize: 'cover' }}  >
-              <Container style={{ marginBottom: "2em" }}>
+            <Jumbotron fluid style={headerStyle}  >
+              <Container style={{ margin: "1em 0" }}>
                 <h1>Debbie's CPR</h1>
                 <h4 style={{ color: "white" }}>
                   Error: {error.message}
@@ -53,8 +61,8 @@ class Jumbo extends Component {
           )
         } else if (!isLoaded) {
           return (
-            <Jumbotron fluid style={{ backgroundImage: `url(${red})`, backgroundSize: 'cover' }}  >
-              <Container style={{ marginBottom: "2em" }}>
+            <Jumbotron fluid style={headerStyle}  >
+              <Container style={{ margin: "1em 0" }}>
                 <h1>Debbie's CPR</h1>
                 <h4 style={{ color: "white" }}>
                   Loading....
@@ -65,14 +73,14 @@ class Jumbo extends Component {
         } else {
           const header = infos.find(info => info.attributes.placement === "Header").attributes.content || ""
           return (
-              <Jumbotron fluid style={{ backgroundImage: `url(${red})`, backgroundSize: 'cover'}}  >
-                  <Container style={{ marginBottom: "2em" }}>
-                      <h1>Debbie's CPR</h1>
-                      <h4 style={{ color: "white"}}>
-                          {header}
-                      </h4>
-                  </Container>
-              </Jumbotron>
+            <Jumbotron fluid style={headerStyle}  >
+              <Container style={{ margin: "1em 0" }}>
+                <h1>Debbie's CPR</h1>
+                <h4 style={{ color: "white"}}>
+                    {header}
+                </h4>
+              </Container>
+            </Jumbotron>
           )
         }
     }
